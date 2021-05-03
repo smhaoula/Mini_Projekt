@@ -355,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58583076}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.962, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1474455411}
@@ -2779,8 +2779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f38b7e05d683c448b28ab50a7fe7f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  bewegung: {x: 0, y: 0, z: 0}
 --- !u!1001 &498156362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5378,7 +5376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891427088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.092, y: 0.63, z: 0.65}
+  m_LocalPosition: {x: -0.092, y: 0.508, z: 0.65}
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
   m_Children: []
   m_Father: {fileID: 1474455411}
@@ -8513,7 +8511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474455410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.8, y: -1.94, z: 33.98}
+  m_LocalPosition: {x: -52.5, y: -1.9, z: -53.61}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 58583080}
@@ -8928,7 +8926,7 @@ MonoBehaviour:
   target: {fileID: 1474455411}
   offset: {x: 0, y: 0, z: 1}
   FireVelocity: {x: 0, y: 0, z: 6}
-  bullet: {fileID: 948581533171752897, guid: c550b360a7a3073438e17ab9e8b1b132, type: 3}
+  bullet: {fileID: 628079301191815651, guid: 062e1f217bd5802458a65815e95dd01e, type: 3}
   bulletSpawnPoint: {fileID: 459397324}
 --- !u!136 &1562562319
 CapsuleCollider:

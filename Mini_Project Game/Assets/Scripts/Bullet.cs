@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public GameObject explosion;
     void OnCollisionEnter(Collision collision){
-        Debug.Log(collision.gameObject.name);
+        var exp = Instantiate(explosion, transform.position, transform.rotation);
+        //Debug.Log(collision.gameObject.name);
         Destroy(gameObject);
+        Destroy(exp, 2f);
     }
 }

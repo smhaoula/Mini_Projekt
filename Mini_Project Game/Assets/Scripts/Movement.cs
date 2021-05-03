@@ -92,7 +92,7 @@ public class Movement : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log(collision.gameObject.name);
-        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        EnemyBullet bullet = collision.gameObject.GetComponent<EnemyBullet>();
         if(bullet != null){
             currentHealth = currentHealth - 5;
             healthBar.SetHealth(currentHealth);

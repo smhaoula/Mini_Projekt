@@ -26,6 +26,7 @@ public class Movement : MonoBehaviour
     void Awake() => _animator = GetComponent<Animator>();
     void Start()
     {
+        gameObject.tag = "Player";
         currentHealth=maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
@@ -97,5 +98,23 @@ public class Movement : MonoBehaviour
             currentHealth = currentHealth - 5;
             healthBar.SetHealth(currentHealth);
         }
+    }
+
+    void Heal()
+    {
+        Debug.Log("Heilen");
+        if(currentHealth< maxHealth-10)
+        {
+            currentHealth = currentHealth + 10;
+        }
+        else
+        {
+            currentHealth = maxHealth;
+        }
+        healthBar.SetHealth(currentHealth);
+    }
+    void OnTriggerEnter()
+    {
+        Heal();
     }
 }

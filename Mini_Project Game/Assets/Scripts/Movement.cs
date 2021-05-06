@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public Transform spawnPoint;
     Animator _animator;
     public int maxHealth = 100;
     public int currentHealth;
@@ -79,6 +80,14 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        if(currentHealth<= 0)
+        {
+            Vector3 spawnPos = new Vector3(spawnPoint.position.x, transform.position.y, spawnPoint.position.z);
+            transform.position = spawnPos;
+            currentHealth = maxHealth;
+            healthBar.SetHealth(currentHealth);
+        }
         if(direction.magnitude >= 0.1f)
                 {
                     float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;

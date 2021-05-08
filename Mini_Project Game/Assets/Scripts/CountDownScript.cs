@@ -26,7 +26,7 @@ public class CountDownScript : MonoBehaviour
             time--;
             txtTimeLeft.text = "Time Left: " + time;
         }
-        GameObject.Find("Player").GetComponent<Movement>().GameOver();
+       // GameObject.Find("Player").GetComponent<Movement>().GameOver();
     }
     
   

@@ -110,7 +110,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-<<<<<<< Updated upstream
+
     void Heal()
     {
         Debug.Log("Heilen");
@@ -127,9 +127,6 @@ public class Movement : MonoBehaviour
     void OnTriggerEnter()
     {
         Heal();
-=======
-    public void GameOver() {
-        SceneManager.LoadScene("Menu");
->>>>>>> Stashed changes
+
     }
 }

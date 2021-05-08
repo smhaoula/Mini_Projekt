@@ -17,22 +17,22 @@ public class Enemy : MonoBehaviour
     public Vector3 FireVelocity = new Vector3(0, 1, 6);
     public GameObject bullet;
     public GameObject bulletSpawnPoint;
-    public GameObject healing;
-    public bool defeated;
 
     void Start(){
         currentHealth=maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         fireRate = 2f;
         nextFire = Time.time;
-        defeated = false;
     }
     void Update()
     {
+        if(currentHealth <= 0){
+            Destroy(gameObject, 0.5f);
+        }
+
 
         if(Vector3.Distance(transform.position, target.position) <= 10){
-            Vector3 targetPosition = new Vector3(target.position.x, this.transform.position.y, target.position.z);
-            transform.LookAt(targetPosition);
+            transform.LookAt(target);
             if(Time.time > nextFire)
             {
                 Shoot();
@@ -59,16 +59,7 @@ public class Enemy : MonoBehaviour
         if(bullet != null){
             currentHealth = currentHealth - 5;
             healthBar.SetHealth(currentHealth);
-        }
-        
-        if(currentHealth <= 0){
-            if(!defeated){
-                defeated=true;
-                Destroy(gameObject);
-                Instantiate(healing, transform.position, transform.rotation);
 
-            }
-            
         }
         
     }

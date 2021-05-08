@@ -99,6 +99,10 @@ public class Movement : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 4ecd958 (GameOverv1)
     void Heal()
     {
         Debug.Log("Heilen");
@@ -115,5 +119,12 @@ public class Movement : MonoBehaviour
     void OnTriggerEnter()
     {
         Heal();
+<<<<<<< HEAD
+=======
+=======
+    public void GameOver() {
+        SceneManager.LoadScene("Menu");
+>>>>>>> Stashed changes
+>>>>>>> parent of 4ecd958 (GameOverv1)
     }
 }

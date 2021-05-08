@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    //private YellowKey yellowKey;
+    //private BlueKey blueKey;
     public Transform spawnPoint;
     Animator _animator;
     public int maxHealth = 100;
@@ -122,8 +124,46 @@ public class Movement : MonoBehaviour
         }
         healthBar.SetHealth(currentHealth);
     }
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        Heal();
+/*
+        if(other.TryGetComponent<Healing>(out Healing heal))
+        {
+            Heal();
+        }
+        
+        if(other.TryGetComponent<YellowKey>(out YellowKey yellow))
+        {
+            yellowKey = yellow;
+            Debug.Log("YellowKey erhalten");
+        }
+
+        if(other.TryGetComponent<BlueKey>(out BlueKey blue))
+        {
+            blueKey = blue;
+            Debug.Log("BlueKey erhalten");
+        }
+        */
     }
+
+/*    public bool HasYellowKey()
+    {
+        if(yellowKey==null)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    public bool HasBlueKey()
+    {
+        if(blueKey==null)
+        {
+            return false;
+        }
+        else{
+            return true;
+        }
+    }*/
 }

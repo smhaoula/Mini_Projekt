@@ -10,7 +10,7 @@ public class FollowPlayer : MonoBehaviour
     public bool gameView;
 
     public Transform worldView;
-
+    
 
     void Start()
     {
@@ -28,6 +28,7 @@ public class FollowPlayer : MonoBehaviour
             gameView = true;
         }
     }
+    
     void FixedUpdate(){
 
         if(gameView)
@@ -46,4 +47,6 @@ public class FollowPlayer : MonoBehaviour
         }
         
     }
+    
+
 }

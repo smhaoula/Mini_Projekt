@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -109,6 +110,7 @@ public class Movement : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
     void Heal()
     {
         Debug.Log("Heilen");
@@ -125,5 +127,9 @@ public class Movement : MonoBehaviour
     void OnTriggerEnter()
     {
         Heal();
+=======
+    public void GameOver() {
+        SceneManager.LoadScene("Menu");
+>>>>>>> Stashed changes
     }
 }

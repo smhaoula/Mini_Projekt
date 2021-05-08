@@ -98,4 +98,22 @@ public class Movement : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
     }
+
+    void Heal()
+    {
+        Debug.Log("Heilen");
+        if(currentHealth< maxHealth-10)
+        {
+            currentHealth = currentHealth + 10;
+        }
+        else
+        {
+            currentHealth = maxHealth;
+        }
+        healthBar.SetHealth(currentHealth);
+    }
+    void OnTriggerEnter()
+    {
+        Heal();
+    }
 }

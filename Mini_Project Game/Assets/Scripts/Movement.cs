@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField]
+    GameObject Image;
     //private YellowKey yellowKey;
     //private BlueKey blueKey;
     public Transform spawnPoint;
@@ -166,4 +169,15 @@ public class Movement : MonoBehaviour
             return true;
         }
     }*/
+public void GameOver()
+    {
+        Image.SetActive(true);
+        StartCoroutine(LoadMenu());
+    }
+    IEnumerator LoadMenu()
+    {
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Menu");
+    }
 }

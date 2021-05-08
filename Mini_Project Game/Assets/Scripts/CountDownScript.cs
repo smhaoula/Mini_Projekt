@@ -23,6 +23,6 @@ public class CountDownScript : MonoBehaviour
             time--;
             txtLeftTime.text = "Time Left : " + time;
         }
-        SceneManager.LoadScene("Menu");
+        GameObject.Find("Player").GetComponent<Movement>().GameOver();
     }
 }

@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Image: {fileID: 0}
+  yellowKey: {fileID: 0}
   spawnPoint: {fileID: 0}
   maxHealth: 100
   currentHealth: 0

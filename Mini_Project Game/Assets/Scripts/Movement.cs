@@ -7,8 +7,10 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]
     GameObject Image;
-    //private YellowKey yellowKey;
-    //private BlueKey blueKey;
+    public YellowKey yellowKey;
+    public BlueKey blueKey;
+    private YellowKey yellowKeyInstance;
+    private BlueKey blueKeyInstance;
     public Transform spawnPoint;
     Animator _animator;
     public int maxHealth = 100;
@@ -88,10 +90,7 @@ public class Movement : MonoBehaviour
 
         if(currentHealth<= 0)
         {
-            Vector3 spawnPos = new Vector3(spawnPoint.position.x, transform.position.y, spawnPoint.position.z);
-            transform.position = spawnPos;
-            currentHealth = maxHealth;
-            healthBar.SetHealth(currentHealth);
+            GameOver();
         }
         if(direction.magnitude >= 0.1f)
                 {
@@ -106,7 +105,6 @@ public class Movement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
         EnemyBullet bullet = collision.gameObject.GetComponent<EnemyBullet>();
         if(bullet != null){
             currentHealth = currentHealth - 5;
@@ -129,7 +127,7 @@ public class Movement : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-/*
+
         if(other.TryGetComponent<Healing>(out Healing heal))
         {
             Heal();
@@ -137,38 +135,39 @@ public class Movement : MonoBehaviour
         
         if(other.TryGetComponent<YellowKey>(out YellowKey yellow))
         {
-            yellowKey = yellow;
+            yellowKeyInstance = yellowKey;
             Debug.Log("YellowKey erhalten");
+            Debug.Log(HasYellowKey());
         }
 
         if(other.TryGetComponent<BlueKey>(out BlueKey blue))
         {
-            blueKey = blue;
+            blueKeyInstance = blueKey;
             Debug.Log("BlueKey erhalten");
         }
-        */
+        
     }
 
-/*    public bool HasYellowKey()
+    public bool HasYellowKey()
     {
-        if(yellowKey==null)
+        if(yellowKeyInstance!=null)
         {
-            return false;
+            return true;
         }
         else{
-            return true;
+            return false;
         }
     }
     public bool HasBlueKey()
     {
-        if(blueKey==null)
+        if(blueKeyInstance!=null)
         {
-            return false;
-        }
-        else{
             return true;
         }
-    }*/
+        else{
+            return false;
+        }
+    }
 public void GameOver()
     {
         Image.SetActive(true);

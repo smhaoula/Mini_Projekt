@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Healing
+  - Ball
   layers:
   - Default
   - TransparentFX

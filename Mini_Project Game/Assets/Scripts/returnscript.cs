@@ -7,12 +7,12 @@ public class returnscript : MonoBehaviour
     [SerializeField]
     Transform newtarget;
     [SerializeField]
-    public AtomScript atomscript;
-    public void OnCollisionEnter(Collision other)
+     AtomScript atomscript;
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.collider.tag == "Ball")
-        {
+        if (other.tag == "Ball") {
             atomscript.target = newtarget;
         }
+
     }
 }

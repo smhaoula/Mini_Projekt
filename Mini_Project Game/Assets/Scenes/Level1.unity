@@ -731,6 +731,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d349256d32854374d98899232f972faf, type: 3}
+--- !u!1 &980329251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 832959071733220935, guid: cc5f3b96bc488144e9b737a372c86752, type: 3}
+  m_PrefabInstance: {fileID: 7360419804178118025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &980329253
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980329251}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ee4c6c263347d24c902b9ec1b3dc2c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1013263360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1458,7 +1482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 652938003306887550, guid: 125c5df2ac6a5bd409e3a946f93391bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.6
+      value: 35.62
       objectReference: {fileID: 0}
     - target: {fileID: 652938003306887550, guid: 125c5df2ac6a5bd409e3a946f93391bc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1466,7 +1490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 652938003306887550, guid: 125c5df2ac6a5bd409e3a946f93391bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -43.5
+      value: -45.57
       objectReference: {fileID: 0}
     - target: {fileID: 652938003306887550, guid: 125c5df2ac6a5bd409e3a946f93391bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1589,7 +1613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830407030317501957, guid: aa554616f7d62bd47b42179708b651a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79
+      value: -0.94
       objectReference: {fileID: 0}
     - target: {fileID: 2830407030317501957, guid: aa554616f7d62bd47b42179708b651a4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1820,7 +1844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 832959071733220933, guid: cc5f3b96bc488144e9b737a372c86752, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.11
+      value: -0.84
       objectReference: {fileID: 0}
     - target: {fileID: 832959071733220933, guid: cc5f3b96bc488144e9b737a372c86752, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1858,7 +1882,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorexistpoint
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7360419805313263804, guid: cc5f3b96bc488144e9b737a372c86752, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc5f3b96bc488144e9b737a372c86752, type: 3}
 --- !u!1 &8270525045342404422 stripped
 GameObject:

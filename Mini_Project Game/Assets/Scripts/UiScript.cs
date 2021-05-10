@@ -23,7 +23,7 @@ public class UiScript : MonoBehaviour
         x = PlayerPrefs.GetInt("nächste Level 2");
         if (x > 1)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(x);
         }
         else { SceneManager.LoadScene(1); }
         

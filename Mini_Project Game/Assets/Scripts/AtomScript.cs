@@ -13,4 +13,11 @@ public class AtomScript : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            GameObject.Find("Player").GetComponent<Movement>().GameOver();
+        }
+    }
 }

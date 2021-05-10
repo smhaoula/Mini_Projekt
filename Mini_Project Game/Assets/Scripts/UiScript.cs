@@ -16,5 +16,17 @@ public class UiScript : MonoBehaviour
         Application.Quit();
    #endif
     }
+
+    public void ContinueGame()
+    {
+        int x;
+        x = PlayerPrefs.GetInt("nächste Level 2");
+        if (x > 1)
+        {
+            SceneManager.LoadScene(2);
+        }
+        else { SceneManager.LoadScene(1); }
+        
+    }
    
 }

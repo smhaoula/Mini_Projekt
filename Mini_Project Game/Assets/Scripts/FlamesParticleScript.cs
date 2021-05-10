@@ -8,6 +8,7 @@ public class FlamesParticleScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.tag=="Player"){
+            PlayerPrefs.SetInt("nächste Level 2", 2);
             SceneManager.LoadScene(2);
 
         }

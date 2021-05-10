@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spike : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.tag == "Player") {
+        if (other.gameObject.tag == "Player") {
             GameObject.Find("Player").GetComponent<Movement>().GameOver();
         }
     }
